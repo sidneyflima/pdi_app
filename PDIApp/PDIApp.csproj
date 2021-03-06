@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6BB1F7B6-7BD9-44A4-8FFC-F4170E1DBD8B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PDIApp</RootNamespace>
+    <AssemblyName>pdiapp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>pdiapp.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controle\Constantes.cs" />
+    <Compile Include="Controle\ModulosCommand\AjustesCor\AjusteIntensidadeCorCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\AjustesCor\CorrecaoTonalidadeClarasCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\AjustesCor\CorrecaoTonalidadeEscurasCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\Conversao\ConverteBinariaCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\Conversao\ConvertePaleta332Command.cs" />
+    <Compile Include="Controle\ModulosCommand\Conversao\FatiamentoBinarioCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\Filtros\FiltrosRealceModulosCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\Filtros\Realce\FiltroLaplaciano4Command.cs" />
+    <Compile Include="Controle\ModulosCommand\Filtros\Realce\FiltroLaplaciano8Command.cs" />
+    <Compile Include="Controle\ModulosCommand\Filtros\Realce\FiltroRobertsPrincipalCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\Filtros\Realce\FiltroRobertsSecundariaCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\Filtros\Realce\FiltroSobelHorizontalCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\Filtros\Realce\FiltroSobelVerticalCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\Filtros\Suavizacao\NaoLineares\FiltroModaCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\Filtros\Suavizacao\NaoLineares\FiltroMininoCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\Filtros\Suavizacao\NaoLineares\FiltroMaximoCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\Filtros\Suavizacao\Lineares\FiltroGaussianoCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\Filtros\Suavizacao\Lineares\FiltroMediaSimplesCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\Filtros\Suavizacao\NaoLineares\FiltroMedianaCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\Filtros\Suavizacao\Lineares\FiltroMediaPonderadaCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\Filtros\FiltrosModulosCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\Filtros\TestePartialModulosCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\Histograma\CriarHistogramaCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\Histograma\EqualizarHistogramaCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\InverterCores\InverterCoresHSICommand.cs" />
+    <Compile Include="Controle\ModulosCommand\Operacoes\ExibirApenasBandaCorCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\InverterCores\InverterCoresRGBCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\RotularComponentes\RotularComponentesQuatroCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\RotularComponentes\RotularComponentesCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\RotularComponentes\RotularComponentesOitoCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\TransformacaoIntensidade\IntensidadeCoresRGBCommand.cs" />
+    <Compile Include="Controle\ParallelModuloCommand.cs" />
+    <Compile Include="Controle\PartialModulosCommand.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Util\Calculos\CalculosBinarios.cs" />
+    <Compile Include="Util\Calculos\CalculosEnum.cs" />
+    <Compile Include="Util\Calculos\CalculosFactory.cs" />
+    <Compile Include="Util\Calculos\CalculosRandom.cs" />
+    <Compile Include="Util\Calculos\CBIR\Calculos\CalculoDescritorCCV.cs" />
+    <Compile Include="Util\Calculos\CBIR\Calculos\CalculoDescritorLBP.cs" />
+    <Compile Include="Util\Calculos\CBIR\CalculosDescritor.cs" />
+    <Compile Include="Util\Calculos\CBIR\Calculos\CalculoDescritorHistograma.cs" />
+    <Compile Include="Util\Calculos\CBIR\DescritoresFactory.cs" />
+    <Compile Include="Util\Calculos\CBIR\Descritores\ColorCoherenceVectorDescritor.cs" />
+    <Compile Include="Util\Calculos\CBIR\Descritores\HistogramaDescritor.cs" />
+    <Compile Include="Util\Calculos\CBIR\Descritores\LocalBinaryPatternDescritor.cs" />
+    <Compile Include="Util\Calculos\CBIR\FachadaDescritores.cs" />
+    <Compile Include="Util\Calculos\CBIR\IDescritor.cs" />
+    <Compile Include="Util\Calculos\CBIR\IMedidaSimilaridade.cs" />
+    <Compile Include="Util\Calculos\CBIR\MedidasSimilaridadeFactory.cs" />
+    <Compile Include="Util\Calculos\CBIR\Similaridade\CorrelacaoHistogramas.cs" />
+    <Compile Include="Util\Calculos\CBIR\Similaridade\DiferencaHistogramas.cs" />
+    <Compile Include="Util\Calculos\CBIR\Similaridade\DistanciaD1Histogramas.cs" />
+    <Compile Include="Util\Calculos\CBIR\Similaridade\DistanciaDLOGHistogramas.cs" />
+    <Compile Include="Util\Calculos\CBIR\Similaridade\InterseccaoHistogramas.cs" />
+    <Compile Include="Util\Calculos\Histograma\CalculoHistograma.cs" />
+    <Compile Include="Util\Calculos\ICalculoDistancia.cs" />
+    <Compile Include="Util\Calculos\Cores\CalculosCores.cs" />
+    <Compile Include="Util\Calculos\TiposDistancia\CalculosDistanciaEuclidiana.cs" />
+    <Compile Include="Controle\ModulosFactory.cs" />
+    <Compile Include="Controle\ModulosCommand\Conversao\ConverteMonocromaticoCommand.cs" />
+    <Compile Include="Controle\ModulosCommand\ModuloCommandNulo.cs" />
+    <Compile Include="Controle\ModuloCommand.cs" />
+    <Compile Include="Controle\Modulos.cs" />
+    <Compile Include="Util\Flyweight\ImagemPool.cs" />
+    <Compile Include="Util\Flyweight\FlyweightPool.cs" />
+    <Compile Include="Util\Flyweight\PoolFactory.cs" />
+    <Compile Include="Util\Flyweight\RGB322PalettePool.cs" />
+    <Compile Include="Util\UndoRedo\ComandoUndoRedo.cs" />
+    <Compile Include="Modelo\Enums.cs" />
+    <Compile Include="Modelo\Histograma.cs" />
+    <Compile Include="Modelo\Imagem.cs" />
+    <Compile Include="Modelo\ImagemLinha.cs" />
+    <Compile Include="Util\Cast.cs" />
+    <Compile Include="Visao\CBIR\FormCBIRTeste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\CBIR\FormCBIRTeste.Designer.cs">
+      <DependentUpon>FormCBIRTeste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\CBIR\FormPrincipalCBIR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\CBIR\FormPrincipalCBIR.Designer.cs">
+      <DependentUpon>FormPrincipalCBIR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\CBIR\SplashCBIR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\CBIR\SplashCBIR.Designer.cs">
+      <DependentUpon>SplashCBIR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Processador\FormBarraProgresso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Processador\FormBarraProgresso.Designer.cs">
+      <DependentUpon>FormBarraProgresso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Processador\FormExibir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Processador\FormExibir.Designer.cs">
+      <DependentUpon>FormExibir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Processador\FormHistograma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Processador\FormHistograma.Designer.cs">
+      <DependentUpon>FormHistograma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Processador\FormParametrosSlideCores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Processador\FormParametrosSlideCores.Designer.cs">
+      <DependentUpon>FormParametrosSlideCores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Processador\FormPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Processador\FormPrincipal.Designer.cs">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Visao\Processador\FormParametroSlide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Processador\FormParametroSlide.Designer.cs">
+      <DependentUpon>FormParametroSlide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Processador\FormSobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Processador\FormSobre.Designer.cs">
+      <DependentUpon>FormSobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\Processador\SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\Processador\SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visao\SplashInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visao\SplashInicial.Designer.cs">
+      <DependentUpon>SplashInicial.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Visao\CBIR\FormCBIRTeste.resx">
+      <DependentUpon>FormCBIRTeste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\CBIR\FormPrincipalCBIR.resx">
+      <DependentUpon>FormPrincipalCBIR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\CBIR\SplashCBIR.resx">
+      <DependentUpon>SplashCBIR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Processador\FormBarraProgresso.resx">
+      <DependentUpon>FormBarraProgresso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Processador\FormExibir.resx">
+      <DependentUpon>FormExibir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Processador\FormHistograma.resx">
+      <DependentUpon>FormHistograma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Processador\FormParametrosSlideCores.resx">
+      <DependentUpon>FormParametrosSlideCores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Processador\FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Processador\FormParametroSlide.resx">
+      <DependentUpon>FormParametroSlide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Processador\FormSobre.resx">
+      <DependentUpon>FormSobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\Processador\SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visao\SplashInicial.resx">
+      <DependentUpon>SplashInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdiapp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\docnew.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom_in.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom_out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zoom_restore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\original.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pdiapp.ico" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\1450075057_Search Images.png" />
+    <Content Include="Resources\chart.png" />
+    <None Include="Resources\content_img.png" />
+    <Content Include="Resources\dropper.png" />
+    <None Include="Resources\exit32x32.png" />
+    <None Include="Resources\info16x16.png" />
+    <None Include="Resources\help16x16.png" />
+    <None Include="Resources\undo16x16.png" />
+    <None Include="Resources\redo16x16.png" />
+    <None Include="Resources\save16x16.png" />
+    <None Include="Resources\open16x16.png" />
+    <None Include="Resources\exit16x16.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
